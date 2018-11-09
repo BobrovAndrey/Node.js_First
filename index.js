@@ -43,7 +43,7 @@ let server = http.createServer(function(req, res){
      //Send the response
     res.end('Hello World\n');
     //Log the request path
-    console.log('Request recived with this payload', buffer);
+    console.log ('Request recived with this payload', buffer);
 
   });
 
