@@ -6,6 +6,7 @@
  const http = require ('http');
  const url = require ('url');
  const StringDecoder = require('string_decoder').StringDecoder;
+ const config = require('./config');
 
 //The server should respond to all requests with a string
 let server = http.createServer(function(req, res){
@@ -64,19 +65,15 @@ let server = http.createServer(function(req, res){
       // Convert the payload to a string
       let payloadString = JSON.stringify(payload);
 
-      //Return the responce
+      //Return the response
+      res.setHeader('Content-Type', 'application/json');
       res.writeHead(statusCode);
       res.end(payloadString);
 
       //Log the request path
       console.log ('Returning this response:', statusCode, payloadString);
-
     });
-
-    
-
   });
-
 });
 
 //Start server, and have it listen on port 3000
