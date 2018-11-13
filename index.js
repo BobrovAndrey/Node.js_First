@@ -76,10 +76,15 @@ let server = http.createServer(function(req, res){
   });
 });
 
-//Start server, and have it listen on port 3000
-server.listen(3000,function(){
-  console.log("The server is listening on port 3000 now");
+// //Start the server
+server.listen(config.port,function(){
+  // console.log('The server is listening on port' +  `${config.port}` +  'in' +  `${config.envName}` +  'mode');
+  console.log('The server is up and running on port '+config.port+' in '+config.envName+' mode.');
 });
+
+// server.listen(config.port,function(){
+//   console.log('The server is up and running on port '+config.port+' in '+config.envName+' mode.');
+// });
 
 //Define the hndlers
 
