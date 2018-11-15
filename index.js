@@ -33,7 +33,7 @@ let httpServer = http.createServer(function(req, res){
 
 //Start the HTTP server
 httpServer.listen(config.httpPort,function(){
-  console.log('The server is listening on port' +  ` ${config.httpPort}`);
+  console.log(`The server is listening on port ${config.httpPort}`);
   // console.log("The server is up and running on port '+config.httpPort+'");
 });
 
