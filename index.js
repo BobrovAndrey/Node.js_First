@@ -10,6 +10,22 @@
  const config = require('./config');
  const fs = require ('fs');
 
+
+
+ //TESTING
+ //@TODO delete this
+ const _data = require ('./lib/data');
+
+ //TESTING
+ //@TODO delete this
+ _data.delete('test','newFile', function(err){
+  console.log('this was the error', err);
+ });
+
+
+
+ 
+
 //Instantiate the HTTP server
 let httpServer = http.createServer(function(req, res){
   undefinedServer(req,res);
