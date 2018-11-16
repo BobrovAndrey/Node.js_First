@@ -9,18 +9,18 @@
  const StringDecoder = require('string_decoder').StringDecoder;
  const config = require('./config');
  const fs = require ('fs');
+ const handlers  = require ('./lib/handlers');
 
 
+//  //TESTING
+//  //@TODO delete this
+//  const _data = require ('./lib/data');
 
- //TESTING
- //@TODO delete this
- const _data = require ('./lib/data');
-
- //TESTING
- //@TODO delete this
- _data.delete('test','newFile', function(err){
-  console.log('this was the error', err);
- });
+//  //TESTING
+//  //@TODO delete this
+//  _data.delete('test','newFile', function(err){
+//   console.log('this was the error', err);
+//  });
 
 
 
@@ -119,26 +119,10 @@ let undefinedServer = function (req, res){
   });
 };
 
-//Define the hadlers
-let handlers = {};
 
-//Ping handler
-handlers.ping = function(data, callback){
-  callback(200);
-};
-
-// //Sample handler
-// handlers.sample = function(data, callback){
-//   //Callback a http status code, and a payload object
-//   callback(406, {'name' : 'sample handler'});
-// };
-
-//Not found handler
-handlers.notFound = function (data, callback){
-  callback (404);
-};
 
 //Define a request router
 let router = {
-  'ping': handlers.ping
+  'ping': handlers.ping,
+  'users': handlers.users
 };
