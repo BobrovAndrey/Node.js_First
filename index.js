@@ -124,5 +124,5 @@ let router = {
   'ping': handlers.ping,
   'users': handlers.users,
   'tokens': handlers.tokens,
-  'checks' : checks
+  'checks' : handlers.checks
 };
