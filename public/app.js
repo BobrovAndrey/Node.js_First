@@ -1,9 +1,21 @@
 /*
-*
-*
-*
-*/
+ * Frontend Logic for application
+ *
+ */
 
-const app = {};
+//Container for a front-end application
+ var app = {};
 
-console.log("Hello console world");
+ //Config
+ app.config = {
+   'sessionToken': false
+ };
+
+ //AJAX Client for the RESTfull API
+
+ app.client.request = function(headers,path,method,queryStringObject,payload,callback){
+
+ }
+
+
+//  console.log("Hello Console World!!");
