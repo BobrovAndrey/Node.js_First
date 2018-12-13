@@ -40,7 +40,7 @@ _app.runTest = function () {
   let sucsesses=0;
   let limit = _app.countTest();
   let counter = 0;
-  for(let key in _app.tests){
+  for(let key in _app.tests){ 
     if(_app.test.hasOwnProperty(key)){
       let subTest = _app.tests[key];
       for(let testName in subTest){
@@ -53,7 +53,8 @@ _app.runTest = function () {
               testValue(function(){
                 //If its callback without throwing, then its succeeded 
               });
-            }catch(e){
+            }catch(e){ 
+              
               //If it throws,then it failed, so capture the error thrown and log it in red
 
 
